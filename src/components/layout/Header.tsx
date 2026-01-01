@@ -3,14 +3,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navItems = [
+const baseNavItems = [
   { href: "/", label: "Dashboard" },
   { href: "/compare", label: "Compare" },
   { href: "/insights", label: "Insights" },
 ];
 
-export function Header() {
+interface HeaderProps {
+  showNextGame?: boolean;
+}
+
+export function Header({ showNextGame = false }: HeaderProps) {
   const pathname = usePathname();
+  
+  const navItems = showNextGame
+    ? [...baseNavItems, { href: "/2026", label: "2026 Game" }]
+    : baseNavItems;
 
   return (
     <header className="border-b border-border-color bg-bg-secondary">
