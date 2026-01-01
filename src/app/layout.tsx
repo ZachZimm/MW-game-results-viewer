@@ -3,8 +3,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 
 export const metadata: Metadata = {
-  title: "Market Game Results",
-  description: "Stock market simulation game results viewer",
+  title: "West is the Best Stock Game Results Viewer",
+  description: "The West is the Best Stock Market Game results viewer",
 };
 
 export default function RootLayout({

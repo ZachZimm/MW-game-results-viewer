@@ -226,8 +226,7 @@ export default async function ComparePage() {
               ))}
           </div>
           <p className="mt-4 text-xs text-text-secondary">
-            More trades don&apos;t guarantee better returns. Matthew&apos;s 6 trades outperform
-            many active traders.
+            More trades don&apos;t guarantee better returns. In this case, Zach Zimmermann&apos;s 963 trades outperformed all of the passive investors.
           </p>
         </div>
 
