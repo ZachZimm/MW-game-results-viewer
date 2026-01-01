@@ -5,6 +5,9 @@ import { Header } from "@/components/layout/Header";
 export const metadata: Metadata = {
   title: "West is the Best Stock Game Results Viewer",
   description: "The West is the Best Stock Market Game results viewer",
+  icons: {
+    icon: "/favicon.png", // or "/icon.png", "/icon.svg", etc.
+  },
 };
 
 export default function RootLayout({
