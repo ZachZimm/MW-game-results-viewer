@@ -23,6 +23,7 @@ export function Header({ showNextGame = false }: HeaderProps) {
   return (
     <header className="border-b border-border-color bg-bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top row: Logo and year */}
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2">
@@ -45,6 +46,7 @@ export function Header({ showNextGame = false }: HeaderProps) {
                 </span>
               </div>
             </Link>
+            {/* Desktop nav - inline */}
             <nav className="hidden md:flex items-center gap-1">
               {navItems.map((item) => {
                 const isActive =
@@ -71,6 +73,28 @@ export function Header({ showNextGame = false }: HeaderProps) {
             2025
           </div>
         </div>
+        {/* Mobile nav - second row */}
+        <nav className="flex md:hidden items-center gap-1 pb-3 -mt-1 overflow-x-auto">
+          {navItems.map((item) => {
+            const isActive =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
+                  isActive
+                    ? "bg-bg-tertiary text-text-primary"
+                    : "text-text-secondary hover:text-text-primary hover:bg-bg-tertiary"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
     </header>
   );
