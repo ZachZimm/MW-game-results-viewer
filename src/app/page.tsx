@@ -61,7 +61,7 @@ export default async function DashboardPage() {
       <div>
         <h1 className="text-3xl font-bold text-text-primary">The West Is The Best 2025 Market Game</h1>
         <p className="text-lg font-semibold text-text-primary mt-1">
-          MRE Stock Competition • Started May 2025
+          Started May 2025
         </p>
       </div>
 
